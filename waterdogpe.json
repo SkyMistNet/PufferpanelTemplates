@@ -1,0 +1,39 @@
+{
+  "name": "WaterdogPE",
+  "display": "Waterdog",
+  "type": "minecraft-proxy",
+  "install": [
+    {
+      "files": [
+        "https://jenkins.waterdog.dev/job/Waterdog/job/WaterdogPE/job/release/lastSuccessfulBuild/artifact/target/Waterdog.jar"
+      ],
+      "type": "download"
+    },
+    {
+      "target": "start.sh",
+      "text": "#!/bin/bash\njava -Xms512M -Xmx4G -jar Waterdog.jar",
+      "type": "writefile"
+    },
+    {
+      "commands": [
+        "chmod a+x start.sh"
+      ],
+      "type": "command"
+    }
+  ],
+  "run": {
+    "stop": "end",
+    "command": "./start.sh",
+    "workingDirectory": "",
+    "pre": [],
+    "post": [],
+    "environmentVars": {}
+  },
+  "data": {},
+  "supportedEnvironments": [
+    {
+      "type": "standard"
+    }
+  ],
+  "requirements": {}
+}
