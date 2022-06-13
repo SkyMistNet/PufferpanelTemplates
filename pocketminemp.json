@@ -1,0 +1,43 @@
+{
+  "name": "Pocketmine",
+  "display": "Pocketmine",
+  "type": "minecraft-bedrock",
+  "install": [
+    {
+      "commands": [
+        "curl -sL https://get.pmmp.io -o test.sh"
+      ],
+      "type": "command"
+    },
+    {
+      "commands": [
+        "chmod +x test.sh"
+      ],
+      "type": "command"
+    },
+    {
+      "commands": [
+        "./test.sh"
+      ],
+      "type": "command"
+    }
+  ],
+  "run": {
+    "stop": "stop",
+    "command": "./start.sh --no-wizard",
+    "workingDirectory": "",
+    "pre": [],
+    "post": [],
+    "environmentVars": {}
+  },
+  "data": {},
+  "environment": {
+    "type": "tty"
+  },
+  "supportedEnvironments": [
+    {
+      "type": "tty"
+    }
+  ],
+  "requirements": {}
+}
