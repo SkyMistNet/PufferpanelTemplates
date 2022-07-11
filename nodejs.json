@@ -1,0 +1,37 @@
+{
+  "name": "nodejs",
+  "display": "NodeJS",
+  "type": "node",
+  "install": [
+    {
+      "commands": [
+        "npm install"
+      ],
+      "type": "command"
+    }
+  ],
+  "run": {
+    "stop": "",
+    "command": "node ./${node-file}",
+    "workingDirectory": "",
+    "pre": [],
+    "post": [],
+    "environmentVars": {}
+  },
+  "data": {
+    "node-file": {
+      "type": "string",
+      "desc": "File that will be run in node ",
+      "display": "Main file",
+      "required": true,
+      "value": "index.js",
+      "userEdit": true
+    }
+  },
+  "supportedEnvironments": [
+    {
+      "type": "standard"
+    }
+  ],
+  "requirements": {}
+}
