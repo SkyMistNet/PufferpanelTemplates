@@ -26,6 +26,11 @@
         "rm installer.sh"
       ],
       "type": "command"
+    },
+    {
+      "type": "writefile",
+      "text": "server-ip=${ip}\nserver-port=${port}\n",
+      "target": "server.properties"
     }
   ],
   "run": {
@@ -36,7 +41,22 @@
     "post": [],
     "environmentVars": {}
   },
-  "data": {},
+  "data": {
+    "ip": {
+      "required": true,
+      "display": "IP",
+      "desc": "Provide the IP to bind the server to.",
+      "type": "string",
+      "value": "0.0.0.0"
+    },
+    "port": {
+      "required": true,
+      "display": "Port",
+      "desc": "Provide the port to bind the server to.",
+      "type": "integer",
+      "value": "19132"
+    }
+  },
   "environment": {
     "type": "tty"
   },
