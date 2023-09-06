@@ -5,19 +5,25 @@
   "install": [
     {
       "commands": [
-        "curl -sL https://get.pmmp.io -o test.sh"
+        "curl -sL https://get.pmmp.io -o installer.sh"
       ],
       "type": "command"
     },
     {
       "commands": [
-        "chmod +x test.sh"
+        "chmod +x installer.sh"
       ],
       "type": "command"
     },
     {
       "commands": [
-        "./test.sh"
+        "./installer.sh"
+      ],
+      "type": "command"
+    },
+    {
+      "commands": [
+        "rm installer.sh"
       ],
       "type": "command"
     }
